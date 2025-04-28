@@ -7,9 +7,9 @@ main() {
             help
     fi        
 
-    show_line_numbers=false
-    invert_match=false
-    multiple_files=false
+    local show_line_numbers=false
+    local invert_match=false
+    local multiple_files=false
 
 
     #while [[ "$1" == -* ]];
@@ -50,16 +50,19 @@ main() {
 
     for file in "${@}"
     do
-        find_match "${pattern}" "${file}"
+        find_match "${pattern}" "${file}" "$show_line_numbers" "$invert_match" "$multiple_files"
     done
 
 }
 
 
 find_match() {
-
-    pattern=$1
-    file=$2
+    local pattern=$1
+    local file=$2
+    local show_line_numbers=$3
+    local invert_match=$4
+    local multiple_files=$5
+    
 
     if [[ ! -f "$file" ]]; 
     then
