@@ -98,9 +98,9 @@ find_match() {
                    fi
                 else
                    if $show_line_numbers; then
-                        echo "$$number:$line"
+                        echo "$number:$line"
                    else
-                        echo "$$line"
+                        echo "$line"
                    fi
                 fi
             fi
