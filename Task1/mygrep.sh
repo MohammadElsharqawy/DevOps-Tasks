@@ -64,7 +64,7 @@ find_match() {
     if [[ ! -f "$file" ]]; 
     then
         echo "Error: File '$file' not found."
-        exit 1
+        return 
     fi  
 
 
