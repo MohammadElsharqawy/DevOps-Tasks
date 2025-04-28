@@ -12,6 +12,11 @@ A custom Bash script that mimics the basic functionality of the `grep` command, 
 - **Multiple files support**: You can search through multiple files and see the matching lines from each file.
 - **Error Handling**: The script gracefully handles errors like missing files and missing patterns.
 
+## Requirements
+
+- **Bash version 4.0 or higher**  
+  This script uses features like `${variable,,}` (lowercasing), which require Bash 4.0+.
+
 ## Installation
 
 1. Clone the repository or download the script to your local machine.
